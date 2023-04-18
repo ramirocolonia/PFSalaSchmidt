@@ -15,6 +15,7 @@ $grisBGMain: #646464;
 $fuentePrincipal : 'piston';
 $fuenteAuxiliar: 'Oswald', sans-serif;
 
+//generales
 * {
     margin: 0;
     padding: 0;
@@ -32,12 +33,6 @@ h1 {
 @media only screen and (max-width: 720px) {
     h1 {
         font-size: 60px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    h1 {
-        font-size: 40px;
     }
 }
 
@@ -62,6 +57,7 @@ h4 {
 }
 
 p {
+    font-family: $fuenteAuxiliar;
     font-size: 20px;
     color: $grisClaro;
 }
@@ -90,6 +86,33 @@ p {
     filter: drop-shadow(3px 3px 10px $grisClaro);
 }
 
+footer {
+    background-color: $rojoPrimario;
+    color: $grisClaro;
+    text-align: center;
+    padding: 10px;
+
+    .contenedorFooter {
+        color: $grisClaro;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+
+        a {
+            text-decoration: none;
+            color: $grisClaro;
+            font-size: 25px;
+            letter-spacing: 3px;
+        }
+
+    }
+
+    .derechos {
+        font-size: 12px;
+    }
+}
+
+//index
 .jumbotron {
     background-color: $grisOscuro;
     background-image: linear-gradient(rgba(36, 36, 36, 0.5), rgba(100, 100, 100, 0.5)), url(../img/saludo2.jpg);
@@ -164,8 +187,8 @@ p {
 
     @media only screen and (max-width: 500px) {
         .logoBlanco {
-            width: 60px;
-            height: 34px;
+            width: 0px;
+            height: 0px;
         }
     }
 }
@@ -216,32 +239,7 @@ p {
     }
 }
 
-footer {
-    background-color: $rojoPrimario;
-    color: $grisClaro;
-    text-align: center;
-    padding: 10px;
-
-    .contenedorFooter {
-        color: $grisClaro;
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 10px;
-
-        a {
-            text-decoration: none;
-            color: $grisClaro;
-            font-size: 25px;
-            letter-spacing: 3px;
-        }
-
-    }
-
-    .derechos {
-        font-size: 12px;
-    }
-}
-
+//contacto
 .formContacto {
     font-family: $fuenteAuxiliar;
     color: $grisClaro;
@@ -266,3 +264,135 @@ footer {
     width: 100%;
     height: 300px;
 }
+
+//que hacemos
+.contenedorQueHace {
+    padding: 20px;
+    background-image: linear-gradient(rgba(100, 100, 100, 0.5), rgba(215, 4, 27, 0.5)), url(../img/puraBox.jpg);
+    background-color: $grisBGMain;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .itemQueHace {
+        width: 95%;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 10px;
+        padding: 15px;
+        color: $grisClaro;
+        margin-bottom: 10px;
+    }
+}
+
+.lineUp {
+    animation: 2s anim-lineUp ease-out;
+}
+
+@keyframes anim-lineUp {
+    0% {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+// horarios
+.fondoHorarios {
+    background-color: $grisBGMain;
+    background-image: linear-gradient(rgba(100, 100, 100, 0.5), rgba(215, 4, 27, 0.5)), url(../img/afuera.jpeg);
+    background-size:cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    .contenedorHorarios {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        padding: 15px;
+        color: $grisClaro;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .contenedorHorarios{
+            width: 95%;
+        }
+
+        h2{
+            font-size: 40px;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        .contenedorHorarios {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        h2{
+            font-size: 28px;
+        }
+    }
+}
+// planes
+.fondoPlanes {
+    background-color: $grisBGMain;
+    background-image: linear-gradient(rgba(100, 100, 100, 0.5), rgba(215, 4, 27, 0.5)), url(../img/horarios.png);
+    background-size:contain;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    .contenedorPlanes {
+        width: 60%;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        padding: 15px;
+        color: $grisClaro;
+        text-align: center;
+
+        .filaPlanes{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+    
+    @media only screen and (max-width: 900px) {
+        .contenedorPlanes{
+            width: 95%;
+        }
+        h2{
+            font-size: 40px;
+        }
+    }
+    @media only screen and (max-width: 360px) {
+        h2{
+            font-size: 20px;
+        }
+        h4{
+            font-size: 16px;
+        }
+    }
+}
+
