@@ -75,6 +75,7 @@ footer {
   color: #d5d5d6;
   text-align: center;
   padding: 10px;
+  min-height: 40vh;
 }
 footer .contenedorFooter {
   color: #d5d5d6;
